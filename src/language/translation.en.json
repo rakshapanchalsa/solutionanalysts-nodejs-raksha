@@ -7,5 +7,10 @@
   "ERR_TOKEN_EXP": "You session is expired, please try login again",
   "ERR_EMAIL_NOT_EXIST": "E-mail Address does not exist",
   "ERR_GENRIC_SYNTAX": "JSON request could not be parsed",
-  "SOMETHING_WENT_WRONG": "Something went wrong"
+  "SOMETHING_WENT_WRONG": "Something went wrong",
+  "ERR_NAME_REQUIRED": "Name should not be empty",
+  "ERR_MAX_LENGTH_NAME": "Maximun length of name is 30",
+  "ERR_TITLE_REQUIRED": "Article Title should not be empty",
+  "ERR_CONTENT_REQUIRED": "Article Content should not be empty",
+  "ARTICLE_POST_SUCCESS": "Article Post successfully"
 }
