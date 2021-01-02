@@ -1,5 +1,5 @@
 import * as sql from "jm-ez-mysql";
-import { Tables } from "../../../config/tables";
+import { CommentTable, Tables } from "../../../config/tables";
 export class CommentUtils {
 
   /** 
@@ -9,4 +9,19 @@ export class CommentUtils {
   public async addArticleComment(commentDetail: Json) {
     return await sql.insert(Tables.COMMENTS, commentDetail);
   }
+
+  /**
+  *  this function should be get article comment details
+  * @param commentId 
+  */
+  public async getArticleCommentById(commentId: Number) {
+    const selectFields = [
+      `${CommentTable.ID} AS commentId`,
+      `${CommentTable.CONTENT}`,
+      `${CommentTable.ARTICLEID}`,
+      `${CommentTable.CREATED_AT}`
+    ]
+    return await sql.first(Tables.COMMENTS, selectFields, `${CommentTable.ID} = ?`, commentId);
+  }
+
 }

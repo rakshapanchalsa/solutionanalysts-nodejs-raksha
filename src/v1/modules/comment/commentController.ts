@@ -14,4 +14,14 @@ export class CommentController {
         const response = ResponseBuilder.successMessage(req.t("ARTICLE_COMMENT_POST_SUCCESS"));
         res.status(response.code).json(response);
     }
+
+    public postComments = async (req: Request, res: Response) => {
+        const { nickName, content, type } = req.body;
+        const { commentId } = req.params;
+        const articleData: Json = { nickName, content, type, commentId };
+        await this.commentUtils.addArticleComment(articleData);
+        const response = ResponseBuilder.successMessage(req.t("COMMENT_POST_SUCCESS"));
+        res.status(response.code).json(response);
+    }
+
 }

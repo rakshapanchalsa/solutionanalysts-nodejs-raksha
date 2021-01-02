@@ -16,5 +16,7 @@
   "ERR_ARTICLE_NOT_FOUND": "Article Not Found",
   "ERR_COMMENT_TYPE_REQUIRED": "Comment type should not be empty",
   "ERR_COMMENT_TYPE_INVALID": "Enter valid comment type",
-  "ARTICLE_COMMENT_POST_SUCCESS": "Article comment post successfully"
+  "ARTICLE_COMMENT_POST_SUCCESS": "Article comment post successfully",
+  "ERR_ARTICLE_COMMENT_NOT_FOUND": "Article comment Not found",
+  "COMMENT_POST_SUCCESS": "Comment Post successfully"
 }
