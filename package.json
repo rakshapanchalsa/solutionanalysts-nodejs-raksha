@@ -1,7 +1,7 @@
 {
   "name": "solutionanalysts-nodejs-raksha",
   "version": "1.0.0",
-  "description": "this project based on post articles and comment on that articles",
+  "description": "This project based on post an articles and comment on an articles , comment on comment an articles",
   "main": "server.js",
   "scripts": {
     "tsc": "tsc",

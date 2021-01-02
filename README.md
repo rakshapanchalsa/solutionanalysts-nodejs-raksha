@@ -1,14 +1,17 @@
 # solutionanalysts-nodejs-raksha API
 
-This project based on post articles and comment on that articles
+This project based on post an articles and comment on an articles , comment on comment an articles
+
 ## Requirements
 
 For development, you will only need Node.js and a node global package, NPM, installed in your environement.
+
 ### Node
+
 - #### Node installation on Windows
 
   Just go on [official Node.js website](https://nodejs.org/) and download the installer.
-Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
+  Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
 
 - #### Node installation on Ubuntu
 
@@ -33,11 +36,13 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     $ npm install npm -g
 
 ###
+
 ## Install
 
     $ git clone https://github.com/rakshapanchalsa/solutionanalysts-nodejs-raksha.git
     $ cd solutionanalysts-nodejs-raksha
     $ npm install
+
 ## Running the project
 
     $ npm start
