@@ -8,12 +8,17 @@ const router: Router = Router();
 const v: Validator = new Validator();
 const articleController = new ArticleController();
 
+// post article API
 const postArticleRoutePath = [
     v.validate(ArticleModel),
     articleController.postArticle];
 router.post("/", postArticleRoutePath);
 
+// get article content API
 router.get("/:articleId", articleController.getArticleDetail);
+
+// get All articles API
+router.get("/", articleController.getArticles);
 
 // Export the express.Router() instance to be used by server.ts
 export const ArticleRoute: Router = router;

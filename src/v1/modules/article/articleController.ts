@@ -20,4 +20,12 @@ export class ArticleController {
         const response = ResponseBuilder.data(articleDetail);
         res.status(response.code).json(response);
     }
+
+    public getArticles = async (req: Request, res: Response) => {
+        const articlesData = await this.articleUtils.getAllArticles(req.query);
+        const { result, count } = articlesData;
+        const response = ResponseBuilder.dataWithPaginate(result, count);
+        res.status(response.code).json(response);
+    }
+
 }
