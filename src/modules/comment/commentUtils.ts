@@ -7,7 +7,7 @@ export class CommentUtils {
    * this function should be post articles comments
    * @param commentDetail articles details
    */
-  public async addArticleComment(commentDetail: Json) {
+  public async addArticleComments(commentDetail: Json) {
     return await sql.insert(Tables.COMMENTS, commentDetail);
   }
 
@@ -29,9 +29,7 @@ export class CommentUtils {
    *  this function should be get all article
    * @param articleId 
    */
-  public async getAllArticleComments(articleId: number, filterData: any) {
-    const { skip, limit } = filterData;
-    const [page, pageLimit] = Utils.getPageSkipAndLimit(skip, limit);
+  public async getAllArticleComments(articleId: number) {
     const tables = `${Tables.COMMENTS} as c
     LEFT JOIN ${Tables.COMMENTS} sc on sc.${CommentTable.COMMENTID} = c.${CommentTable.ID}`
     const selectFields = [
@@ -49,7 +47,7 @@ export class CommentUtils {
             )),''),
             ']') AS subComments`
     ]
-    const result = await sql.findAllWithCount(tables, [`DISTINCT c.${CommentTable.ID} `], selectFields, `c.${CommentTable.ARTICLEID} = ${articleId} `, ` GROUP BY c.${CommentTable.ID} ORDER BY c.${CommentTable.CREATED_AT} DESC LIMIT ? OFFSET ? `, [pageLimit, page]);
+    const result = await sql.findAllWithCount(tables, [`DISTINCT c.${CommentTable.ID} `], selectFields, `c.${CommentTable.ARTICLEID} = ${articleId} `, `GROUP BY c.${CommentTable.ID}`);
     const newArray = result.result.map((data) => {
       data.subComments = data && data.subComments ? Utils.formatStringObjectsToArrayObjects(data, "subComments") : null;
       return data;

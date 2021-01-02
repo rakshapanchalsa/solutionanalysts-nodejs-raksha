@@ -4,7 +4,7 @@ import { Utils } from "./../../helpers/utils";
 export class ArticleUtils {
 
   /** 
-   * this function should be post articles details
+   * this function should be post article details
    * @param articleDetail articles details
    */
   public async addArticleDetails(articleDetail: Json) {
@@ -26,18 +26,22 @@ export class ArticleUtils {
   }
 
   /**
-  *  this function should be get all article
+  * this function should be getting all article
   * @param articleId 
   */
   public async getAllArticles(filterData: any) {
-    const { skip, limit } = filterData;
+    const { skip, limit, searchString } = filterData;
     const [page, pageLimit] = Utils.getPageSkipAndLimit(skip, limit);
+    let condition = '';
+    if (searchString) {
+      condition += `(${ArticleTable.TITLE} LIKE '%${searchString}%' OR  ${ArticleTable.NICKNAME} LIKE  '%${searchString}%')`;
+    }
     const selectFields = [
       `${ArticleTable.ID} AS articleId`,
       `${ArticleTable.TITLE}`,
       `${ArticleTable.CONTENT}`,
       `${ArticleTable.CREATED_AT}`
     ]
-    return await sql.findAllWithCount(Tables.ARTICLES, [`DISTINCT ${ArticleTable.ID}`], selectFields, '', ` GROUP BY ${ArticleTable.ID} ORDER BY ${ArticleTable.CREATED_AT} DESC LIMIT ? OFFSET ? `, [pageLimit, page]);
+    return await sql.findAllWithCount(Tables.ARTICLES, [`DISTINCT ${ArticleTable.ID}`], selectFields, condition, ` GROUP BY ${ArticleTable.ID} ORDER BY ${ArticleTable.CREATED_AT} ASC LIMIT ? OFFSET ? `, [pageLimit, page]);
   }
 }

@@ -9,6 +9,7 @@ const router: Router = Router();
 const v: Validator = new Validator();
 const articleController = new ArticleController();
 const articleMiddleware = new ArticleMiddleware();
+
 // post article API
 const postArticleRoutePath = [
     v.validate(ArticleModel),
