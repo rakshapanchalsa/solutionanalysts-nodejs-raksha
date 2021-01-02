@@ -1,7 +1,7 @@
 import { IsEnum, IsNotEmpty, MaxLength, Validate } from "class-validator";
-import { Constants } from "../../../config/constants";
-import { Enums } from "../../../config/Enum";
-import { Model } from "../../../model";
+import { Constants } from "./../../config/constants";
+import { Enums } from "./../../config/Enum";
+import { Model } from "./../../model";
 
 export class ArticleCommentModel extends Model {
 

@@ -1,6 +1,7 @@
 import express = require("express");
-import { ArticleRoute } from "./v1/modules/article/articleRoute";
-import { CommentRoute } from "./v1/modules/comment/commentRoute";
+import { ArticleRoute } from "./modules/article/articleRoute";
+import { CommentRoute } from "./modules/comment/commentRoute";
+
 export class Routes {
   protected basePath: string;
 

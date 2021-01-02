@@ -1,6 +1,6 @@
 import * as sql from "jm-ez-mysql";
-import { ArticleTable, Tables } from "../../../config/tables";
-import { Utils } from "../../../helpers/utils";
+import { ArticleTable, Tables } from "./../../config/tables";
+import { Utils } from "./../../helpers/utils";
 export class ArticleUtils {
 
   /** 

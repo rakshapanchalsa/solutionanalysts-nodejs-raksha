@@ -1,6 +1,6 @@
 // Import only what we need from express
 import { Router } from "express";
-import { Validator } from "../../../validate";
+import { Validator } from "./../../validate";
 import { ArticleController } from "./articleController";
 import { ArticleMiddleware } from "./articleMiddleware";
 import { ArticleModel } from "./articleModel";

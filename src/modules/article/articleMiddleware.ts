@@ -1,5 +1,4 @@
-import { ResponseBuilder } from "../../../helpers/responseBuilder";
-import { Utils } from "../../../helpers/utils";
+import { ResponseBuilder } from "../../helpers/responseBuilder";
 import { ArticleUtils } from "./articleUtils";
 export class ArticleMiddleware {
   private articleUtils: ArticleUtils = new ArticleUtils();
