@@ -12,5 +12,9 @@
   "ERR_MAX_LENGTH_NAME": "Maximun length of name is 30",
   "ERR_TITLE_REQUIRED": "Article Title should not be empty",
   "ERR_CONTENT_REQUIRED": "Article Content should not be empty",
-  "ARTICLE_POST_SUCCESS": "Article Post successfully"
+  "ARTICLE_POST_SUCCESS": "Article Post successfully",
+  "ERR_ARTICLE_NOT_FOUND": "Article Not Found",
+  "ERR_COMMENT_TYPE_REQUIRED": "Comment type should not be empty",
+  "ERR_COMMENT_TYPE_INVALID": "Enter valid comment type",
+  "ARTICLE_COMMENT_POST_SUCCESS": "Article comment post successfully"
 }
