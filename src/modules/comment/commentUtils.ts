@@ -26,7 +26,7 @@ export class CommentUtils {
   }
 
   /**
-   *  this function should be get all article
+   *  this function should be get all comments
    * @param articleId 
    */
   public async getAllArticleComments(articleId: number) {
