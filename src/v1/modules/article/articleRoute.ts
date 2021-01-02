@@ -13,5 +13,7 @@ const postArticleRoutePath = [
     articleController.postArticle];
 router.post("/", postArticleRoutePath);
 
+router.get("/:articleId", articleController.getArticleDetail);
+
 // Export the express.Router() instance to be used by server.ts
 export const ArticleRoute: Router = router;

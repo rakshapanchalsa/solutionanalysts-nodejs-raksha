@@ -13,4 +13,11 @@ export class ArticleController {
         const response = ResponseBuilder.successMessage(req.t("ARTICLE_POST_SUCCESS"));
         res.status(response.code).json(response);
     }
+
+    public getArticleDetail = async (req: Request, res: Response) => {
+        const { articleId } = req.params;
+        const articleDetail = await this.articleUtils.getArticleDetailById(articleId);
+        const response = ResponseBuilder.data(articleDetail);
+        res.status(response.code).json(response);
+    }
 }
