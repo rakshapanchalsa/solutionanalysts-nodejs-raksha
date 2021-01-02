@@ -1,0 +1,11 @@
+{
+  "ERR_INTERNAL_SERVER": "Internal Server Error",
+  "ERR_URL_NOT_FOUND": "Requested URL not found!",
+  "ERR_NO_USER_FOUND": "User not found!",
+  "ERR_UNAUTH": "You are unauthorized",
+  "ERR_INVALID_TOKEN": "This token is not valid",
+  "ERR_TOKEN_EXP": "You session is expired, please try login again",
+  "ERR_EMAIL_NOT_EXIST": "E-mail Address does not exist",
+  "ERR_GENRIC_SYNTAX": "JSON request could not be parsed",
+  "SOMETHING_WENT_WRONG": "Something went wrong"
+}
